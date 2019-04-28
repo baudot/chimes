@@ -21,17 +21,26 @@ Note d4(D_MOTOR, D_ENCODER);
 Note e4(E_MOTOR, E_ENCODER);
 Note f4(F_MOTOR, F_ENCODER);
 Note a5(A_MOTOR, A_ENCODER);
-
 int distance;
 
 void setup() {
-  Serial.begin(9600);
+  pinMode(D_MOTOR, OUTPUT);
+  pinMode(E_MOTOR, OUTPUT);
+  pinMode(F_MOTOR, OUTPUT);
+  pinMode(A_MOTOR, OUTPUT);
+  pinMode(D_ENCODER, INPUT);
+  pinMode(E_ENCODER, INPUT);
+  pinMode(F_ENCODER, INPUT);
+  pinMode(A_ENCODER, INPUT);
 }
 
 void loop() {
   distance = sonar.ping_cm();
+  // Start playing if someone gets within a foot of the rangefinder.
   if (distance != 0 && distance < 30) {
     play_song();
+    // Don't play again if the person is still standing in front of the sensor.
+    while (distance < 50) distance = sonar.ping_cm();
   }
 }
 
