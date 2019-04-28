@@ -1,6 +1,13 @@
 # Chimes 
 The code for the self-playing chimes for Maker Media's Live Build, April 2019.
 
+## You Also Need to Download...
+The "NewPing" library for Arduino. 
+Open your Arduino editor, go to the menu for:
+Sketch->Include Library->Manage Libraries
+...then, in the window that pops up, enter NewPing in the search bar. 
+An entry for NewPing appears. Click on it and then click the "Install" button that appears.
+
 # Why I Wanted to Do This
 I always like making little art with electronics, something just a little beautiful and quirky. I'd done an Arduino-driven chimeset before, as a demo project for Make's booth at MakerFaire Bay Area a few years before, but I was never fully happy with that version. The chimes were rung by solenoids, and that was pleasantly simple, but the 12V solenoids I'd found were sub-awesome. Mostly they were too quiet. 
 
