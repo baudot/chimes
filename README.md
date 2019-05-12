@@ -1,5 +1,5 @@
 # Chimes 
-The code for the self-playing chimes for Maker Media's Live Build, April 2019.
+An earlier (unused) version of the code for the self-playing chimes for Maker Media's Live Build, April 2019. This version was written for an earlier build, that used a triphammer (with rotating cam) that I hadn't ironed the bugs out of in time for the broadcast. If you've found your way here, you're in the wrong place. Maybe I'll come back and finish this version someday. But probably not.
 
 ## You Also Need to Download...
 The "NewPing" library for Arduino. 
